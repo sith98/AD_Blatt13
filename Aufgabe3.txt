@@ -1,0 +1,18 @@
+O(|V| + |E|)
+Führe Topologische Sortierung durch (Tiefensuche)
+
+Entfernungen d_i für alle Knoten i
+
+O(|V|)
+Gehe alle Knoten durch und setze d_i auf unendlich
+
+Sei s der Startknoten
+
+Setze d_s auf 0
+
+Gehe alle Knoten "i" >= s durch:
+    Gehe alle Kanten (i, "j") durch:
+        Wenn d_i + w(i, j) < d_j:
+            Setze d_j auf d_i + w(i, j)
+
+Werte d_i sind kürzeste Wege von s zu i.
