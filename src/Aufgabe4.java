@@ -62,7 +62,15 @@ public class Aufgabe4 {
             {Inf, Inf, Inf, 6, 0}
         };
 
-        var result = floydWarshall(example);
+        double[][] example2 = {
+            {0, Inf, Inf, Inf, -1, Inf},
+            {1, 0, Inf, 2, Inf, Inf},
+            {Inf, 2, 0, Inf, Inf, -8},
+            {-4, Inf, Inf, 0, 3, Inf},
+            {Inf, 7, Inf, Inf, 0, Inf},
+            {Inf, 5, 10, Inf, Inf, 0}
+        };
+        var result = floydWarshall(example2);
 
         for (double[] row : result) {
             System.out.println(Arrays.toString(row));
